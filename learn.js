@@ -10,7 +10,7 @@ function names() {
 names();
 console.log(typeof years);
 
-let time = 4;
+let time = 5;
 
 if (time < 7) {
   console.log("День!");
@@ -18,3 +18,5 @@ if (time < 7) {
   console.log("Вечер!");
 }
 console.log(time);
+
+greeting = time < 7 ? "День!" : "Вечер!";
