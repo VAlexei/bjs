@@ -1,4 +1,10 @@
 console.log("let's rock!");
-let userName = "Alex";
-console.log(userName);
+
 const years = 1986;
+console.log(years);
+
+{
+  var userName = "Alex1";
+  
+}
+console.log(userName);
