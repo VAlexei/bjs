@@ -8,3 +8,13 @@ function names() {
   console.log(userName);
 }
 names();
+console.log(typeof years);
+
+let time = 4;
+
+if (time < 7) {
+  console.log("День!");
+} else {
+  console.log("Вечер!");
+}
+console.log(time);
