@@ -20,3 +20,9 @@ if (time < 7) {
 console.log(time);
 
 greeting = time < 7 ? "День!" : "Вечер!";
+
+//Конкатенация строк
+
+let Name = "Alex";
+
+console.log(`Привет, ${Name}!`);
