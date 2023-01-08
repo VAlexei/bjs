@@ -48,8 +48,29 @@ function sayNumber(num) {
 sayNumber(34);
 
 //return
+//завершает работу функции
 function sum(a, b) {
-  const result = a + b;
-  return result;
+  return a + b;
 }
 let res = sum(10, 15);
+console.log(res);
+
+//функция как аргумент
+console.log(sum(12, 34));
+
+//колбэки функция принимающая др ф-ю как аргумент
+function doIt(fun, a, b) {
+  let result = fun(a, b);
+  console.log(result);
+}
+
+doIt(sum, 10, 110);
+
+//IIFE анонимная самовызывающаяся ф-я
+(function () {
+  console.log("Мгновенно!");
+})();
+
+(function (a, b) {
+  console.log(a + b);
+})(10, 20);
