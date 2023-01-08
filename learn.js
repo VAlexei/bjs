@@ -19,10 +19,37 @@ if (time < 7) {
 }
 console.log(time);
 
+//тернарный оператор
 greeting = time < 7 ? "День!" : "Вечер!";
 
 //Конкатенация строк
 
 let Name = "Alex";
 
-console.log(`Привет, ${Name}!`);
+console.log(typeof `Привет, ${Name}!`);
+
+//functions declaration
+function sayHi() {
+  console.log(`Привет, ${Name}!`);
+}
+sayHi();
+
+//function expretion
+let sayBuy = function () {
+  console.log(`Goodbuy!`);
+};
+sayBuy();
+
+//параметры
+function sayNumber(num) {
+  console.log(`It is ${num} `);
+}
+//аргументы
+sayNumber(34);
+
+//return
+function sum(a, b) {
+  const result = a + b;
+  return result;
+}
+let res = sum(10, 15);
