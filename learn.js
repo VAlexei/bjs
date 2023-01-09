@@ -101,3 +101,15 @@ const sum2 = (a, b) => a + b;
 console.log(sum2(10, 21));
 
 //Массивы
+const autoBrands = ["Tesla", "BMV", "Delorean"];
+console.log(autoBrands);
+console.log(autoBrands[0]);
+console.log(autoBrands.length);
+
+//Методы массива
+autoBrands.push("Nissan"); //Доб-м эл-т в конец массива
+autoBrands.pop(); //Удаляем эл-т из конца массива
+autoBrands.shift(); //Удаляем элемент из начала м
+autoBrands.unshift("Volvo"); //Добавляем элемент в начало м
+autoBrands.splice(1, 2); //Стартуя с элемента [1] удали 2 элемента
+console.log(autoBrands);
