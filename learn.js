@@ -101,7 +101,7 @@ const sum2 = (a, b) => a + b;
 console.log(sum2(10, 21));
 
 //Массивы
-const autoBrands = ["Tesla", "BMV", "Delorean"];
+const autoBrands = ["Tesla", "BMV", "Delorean", "Bugatty"];
 console.log(autoBrands);
 console.log(autoBrands[0]);
 console.log(autoBrands.length);
@@ -113,3 +113,22 @@ autoBrands.shift(); //Удаляем элемент из начала м
 autoBrands.unshift("Volvo"); //Добавляем элемент в начало м
 autoBrands.splice(1, 2); //Стартуя с элемента [1] удали 2 элемента
 console.log(autoBrands);
+
+//Циклы
+for (i = 0; i < 10; i++) {
+  console.log(i);
+}
+//Обход массива циклом for of
+for (item of autoBrands) {
+  console.log(item);
+}
+//forEach()
+// autoBrands.forEach(function (brand, index) {
+//   console.log(`${brand} => ${index}`);
+// });
+autoBrands.forEach(printBrand);
+function printBrand(brand, index) {
+  console.log(`${brand} => ${index}`);
+}
+
+autoBrands.forEach((brand, index) => console.log(`${brand} -> ${index}`));
