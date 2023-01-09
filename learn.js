@@ -74,3 +74,30 @@ doIt(sum, 10, 110);
 (function (a, b) {
   console.log(a + b);
 })(10, 20);
+
+let res2 = (function (a, b) {
+  return a + b;
+})(10, 20);
+
+console.log(res2);
+
+//Стрелочная функция
+function sayHey(name) {
+  console.log(`Hey! ${name}`);
+}
+sayHey("Olaf");
+
+//Не имеет своего контекста и ссылается на контекст области , в которой она была обьявлена
+const arrSayHey = (name) => {
+  console.log(`Hey! ${name}`);
+};
+//или если условия можно зап-ть в 1 строчку:
+const arrSayHey2 = (name) => console.log(`Hey! ${name}`);
+
+arrSayHey2("Olafel");
+
+//или можно сократить return:
+const sum2 = (a, b) => a + b;
+console.log(sum2(10, 21));
+
+//Массивы
