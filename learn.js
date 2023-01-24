@@ -20,15 +20,15 @@ if (time < 7) {
 console.log(time);
 
 //тернарный оператор
-greeting = time < 7 ? "День!" : "Вечер!";
+greeting1 = time < 7 ? "День!!" : "Вечер!!";
+console.log(greeting1);
 
 //Конкатенация строк
-
 let Name = "Alex";
 
 console.log(typeof `Привет, ${Name}!`);
 
-//functions declaration
+//functions declaration - можем вызывать до обьявления
 function sayHi() {
   console.log(`Привет, ${Name}!`);
 }
@@ -91,6 +91,8 @@ sayHey("Olaf");
 const arrSayHey = (name) => {
   console.log(`Hey! ${name}`);
 };
+
+const heiOne = (nameMe) => console.log(`Hei ${nameMe}!`);
 //или если условия можно зап-ть в 1 строчку:
 const arrSayHey2 = (name) => console.log(`Hey! ${name}`);
 
@@ -132,3 +134,5 @@ function printBrand(brand, index) {
 }
 
 autoBrands.forEach((brand, index) => console.log(`${brand} -> ${index}`));
+
+//12. Обьекты
