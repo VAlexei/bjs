@@ -1,48 +1,55 @@
-console.log("let's rock!");
+//Добавляем функцию для вывода результатов как в кансоль так и на странице
+function print(msg) {
+  let divOne = document.createElement("div");
+  document.getElementById("myDiv").appendChild(divOne).innerHTML = msg;
+  console.log(msg);
+}
+
+print("let's rock!");
 
 const years = 1986;
-console.log(years);
+print(years);
 var userName = "Alex121";
 
 function names() {
-  console.log(userName);
+  print(userName);
 }
 names();
-console.log(typeof years);
+print(typeof years);
 
 let time = 5;
 
 if (time < 7) {
-  console.log("День!");
+  print("День!");
 } else {
-  console.log("Вечер!");
+  print("Вечер!");
 }
-console.log(time);
+print(time);
 
 //тернарный оператор
 greeting1 = time < 7 ? "День!!" : "Вечер!!";
-console.log(greeting1);
+print(greeting1);
 
 //Конкатенация строк
 let Name = "Alex";
 
-console.log(typeof `Привет, ${Name}!`);
+print(typeof `Привет, ${Name}!`);
 
 //functions declaration - можем вызывать до обьявления
 function sayHi() {
-  console.log(`Привет, ${Name}!`);
+  print(`Привет, ${Name}!`);
 }
 sayHi();
 
 //function expretion
 let sayBuy = function () {
-  console.log(`Goodbuy!`);
+  print(`Goodbuy!`);
 };
 sayBuy();
 
 //параметры
 function sayNumber(num) {
-  console.log(`It is ${num} `);
+  print(`It is ${num} `);
 }
 //аргументы
 sayNumber(34);
@@ -53,60 +60,60 @@ function sum(a, b) {
   return a + b;
 }
 let res = sum(10, 15);
-console.log(res);
+print(res);
 
 //функция как аргумент
-console.log(sum(12, 34));
+print(sum(12, 34));
 
 //колбэки функция принимающая др ф-ю как аргумент
 function doIt(fun, a, b) {
   let result = fun(a, b);
-  console.log(result);
+  print(result);
 }
 
 doIt(sum, 10, 110);
 
 //IIFE анонимная самовызывающаяся ф-я
 (function () {
-  console.log("Мгновенно!");
+  print("Мгновенно!");
 })();
 
 (function (a, b) {
-  console.log(a + b);
+  print(a + b);
 })(10, 20);
 
 let res2 = (function (a, b) {
   return a + b;
 })(10, 20);
 
-console.log(res2);
+print(res2);
 
 //Стрелочная функция
 function sayHey(name) {
-  console.log(`Hey! ${name}`);
+  print(`Hey! ${name}`);
 }
 sayHey("Olaf");
 
 //Не имеет своего контекста и ссылается на контекст области , в которой она была обьявлена
 const arrSayHey = (name) => {
-  console.log(`Hey! ${name}`);
+  print(`Hey! ${name}`);
 };
 
-const heiOne = (nameMe) => console.log(`Hei ${nameMe}!`);
+const heiOne = (nameMe) => print(`Hei ${nameMe}!`);
 //или если условия можно зап-ть в 1 строчку:
-const arrSayHey2 = (name) => console.log(`Hey! ${name}`);
+const arrSayHey2 = (name) => print(`Hey! ${name}`);
 
 arrSayHey2("Olafel");
 
 //или можно сократить return:
 const sum2 = (a, b) => a + b;
-console.log(sum2(10, 21));
+print(sum2(10, 21));
 
 //Массивы
 const autoBrands = ["Tesla", "BMV", "Delorean", "Bugatty"];
-console.log(autoBrands);
-console.log(autoBrands[0]);
-console.log(autoBrands.length);
+print(autoBrands);
+print(autoBrands[0]);
+print(autoBrands.length);
 
 //Методы массива
 autoBrands.push("Nissan"); //Доб-м эл-т в конец массива
@@ -114,25 +121,33 @@ autoBrands.pop(); //Удаляем эл-т из конца массива
 autoBrands.shift(); //Удаляем элемент из начала м
 autoBrands.unshift("Volvo"); //Добавляем элемент в начало м
 autoBrands.splice(1, 2); //Стартуя с элемента [1] удали 2 элемента
-console.log(autoBrands);
+print(autoBrands);
 
 //Циклы
-for (i = 0; i < 10; i++) {
-  console.log(i);
+for (i = 0; i < 4; i++) {
+  print(i);
 }
 //Обход массива циклом for of
 for (item of autoBrands) {
-  console.log(item);
+  print(item);
 }
 //forEach()
 // autoBrands.forEach(function (brand, index) {
-//   console.log(`${brand} => ${index}`);
+//   print(`${brand} => ${index}`);
 // });
 autoBrands.forEach(printBrand);
 function printBrand(brand, index) {
-  console.log(`${brand} => ${index}`);
+  print(`${brand} => ${index}`);
 }
 
-autoBrands.forEach((brand, index) => console.log(`${brand} -> ${index}`));
+autoBrands.forEach((brand, index) => print(`${brand} -> ${index}`));
 
 //12. Обьекты
+const person = {
+  age: 36,
+  userName: "Alex",
+  married: false,
+};
+print(person);
+print(person.userName);
+print(person["age"]);
