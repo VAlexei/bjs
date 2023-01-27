@@ -147,7 +147,22 @@ const person = {
   age: 36,
   userName: "Alex",
   married: false,
+  sayHello: function (name) {
+    print(`Привет, ${name}! Меня зовут ${person.userName}!`);
+  },
 };
+//Вывод св-в
 print(person);
 print(person.userName);
 print(person["age"]);
+//добавление свойств
+person.profession = "js creator";
+print(person.profession);
+//Удаление св-ва
+delete person.married;
+//Методы в объектах
+person.sayHello("Jo");
+//Обход свойств через for in
+for (let key in person) {
+  console.log(key, ":", person[key]);
+}
